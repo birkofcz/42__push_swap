@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:28:27 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/19 15:24:08 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/19 16:33:08 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	*ft_array_from_num(int *array, char *argv[], int argc)
 	return (array);
 }
 
-int	ft_stackinit_numbers(s_stack *stack_a, s_stack *stack_b, char *argv[], int argc)
+/* int	ft_stackinit_numbers(t_stack *stack_a, t_stack *stack_b, char *argv[], int argc)
 {
 	int	size;
 	int	num;
@@ -64,4 +64,34 @@ int	ft_stackinit_numbers(s_stack *stack_a, s_stack *stack_b, char *argv[], int a
 	}
 	else
 		return (1);
+} */
+
+/* shorter version - NORM friendly */
+int	ft_stackinit_numbers(t_stack *stack_a, t_stack *stack_b, char *argv[], int argc)
+{
+	int size;
+	int num;
+	int *array;
+
+    if (ft_splitted_test(argv + 1) != 0)
+        return (1);
+    size = argc - 1;
+    array = ft_array_from_num(NULL, argv, size);
+    if (array == NULL)
+        return (1);
+    ft_bubble_sort(array, size);
+    if (ft_duplicate_limits_tester(array, size) != 0)
+    {
+        free(array);
+        return (1);
+    }
+    ft_stacks(stack_a, stack_b, size);
+	num = 0;
+    while (size--)
+	{
+		num = ft_atoi(argv[size + 1]);
+        ft_push(stack_a, num);
+	}
+    free(array);
+    return (0);
 }

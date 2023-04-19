@@ -6,13 +6,13 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 14:53:59 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/19 15:42:54 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/19 15:55:13 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	*ft_create_indexes(s_stack *stack_a)
+int	*ft_create_indexes(t_stack *stack_a)
 {
 	int	*indexes;
 	int	*temp;
@@ -45,7 +45,7 @@ int	*ft_create_indexes(s_stack *stack_a)
 	return (indexes);
 }
 
-void	ft_sort_radix(/* s_stack *stack_a, s_stack *stack_b, */ s_stack *indexes_a, s_stack *indexes_b)
+void	ft_sort_radix(/* t_stack *stack_a, t_stack *stack_b, */ t_stack *indexes_a, t_stack *indexes_b)
 {
 	int	i;
 	int	j;
@@ -89,11 +89,11 @@ void	ft_sort_radix(/* s_stack *stack_a, s_stack *stack_b, */ s_stack *indexes_a,
 	}
 }
 
-void	ft_radix(s_stack *stack_a /* s_stack *stack_b */)
+void	ft_radix(t_stack *stack_a /* t_stack *stack_b */)
 {
 	int		*indexes;
-	s_stack	indexes_a;
-	s_stack	indexes_b;
+	t_stack	indexes_a;
+	t_stack	indexes_b;
 	int		i;
 	int		j;
 

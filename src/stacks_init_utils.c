@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 11:22:05 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/19 15:27:18 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/19 15:56:27 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,7 +62,7 @@ int	ft_array_filler(int **array, char *splitted[])
 	return (size);
 }
 
-void	ft_stacks(s_stack *stack_a, s_stack *stack_b, int size)
+void	ft_stacks(t_stack *stack_a, t_stack *stack_b, int size)
 {
 	stack_a->data = (int *)malloc(size * sizeof(int));
 	if (!stack_a->data)

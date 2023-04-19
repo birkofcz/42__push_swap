@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:16:18 by sbenes            #+#    #+#             */
-/*   Updated: 2023/03/27 14:30:14 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/19 15:54:23 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /* ROTATE operations - basic rotate operation + rotate a, b and both (rr) */
 
-void	ft_rotate(s_stack *stack)
+void	ft_rotate(t_stack *stack)
 {
 	int	temp;
 	int	i;
@@ -32,19 +32,19 @@ void	ft_rotate(s_stack *stack)
 	}
 }
 
-void	ft_ra(s_stack *stack_a)
+void	ft_ra(t_stack *stack_a)
 {
 	ft_printf("ra\n");
 	ft_rotate(stack_a);
 }
 
-void	ft_rb(s_stack *stack_b)
+void	ft_rb(t_stack *stack_b)
 {
 	ft_printf("rb\n");
 	ft_rotate(stack_b);
 }
 
-void	ft_rr(s_stack *stack_a, s_stack *stack_b)
+void	ft_rr(t_stack *stack_a, t_stack *stack_b)
 {
 	ft_printf("rr\n");
 	ft_rotate(stack_a);

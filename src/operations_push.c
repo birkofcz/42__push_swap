@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:11:16 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/19 15:08:02 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/19 15:54:15 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /* PUSH operations - basic push and pop + push a and push_b */
 
-void	ft_push(s_stack *stack, int num)
+void	ft_push(t_stack *stack, int num)
 {
 	if (stack->top == stack->size - 1)
 	{
@@ -24,7 +24,7 @@ void	ft_push(s_stack *stack, int num)
 	stack->data[++stack->top] = num;
 }
 
-int	ft_pop(s_stack *stack)
+int	ft_pop(t_stack *stack)
 {
 	if (stack->top == -1)
 	{
@@ -34,7 +34,7 @@ int	ft_pop(s_stack *stack)
 	return (stack->data[stack->top--]);
 }
 
-void	ft_pa(s_stack *stack_a, s_stack *stack_b)
+void	ft_pa(t_stack *stack_a, t_stack *stack_b)
 {
 	int	num;
 
@@ -46,7 +46,7 @@ void	ft_pa(s_stack *stack_a, s_stack *stack_b)
 	}
 }
 
-void	ft_pb(s_stack *stack_a, s_stack *stack_b)
+void	ft_pb(t_stack *stack_a, t_stack *stack_b)
 {
 	int	num;
 

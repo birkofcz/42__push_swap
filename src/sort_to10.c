@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 15:48:22 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/19 15:19:23 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/19 15:55:38 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 /* Functions to sort up to 10 numbers - optimized*/
 
-void	ft_sort2(s_stack *stack_a)
+void	ft_sort2(t_stack *stack_a)
 {
 	int	a;
 	int	b;
@@ -25,7 +25,7 @@ void	ft_sort2(s_stack *stack_a)
 		ft_sa(stack_a);
 }
 
-void	ft_sort3(s_stack *stack_a)
+void	ft_sort3(t_stack *stack_a)
 {
 	int	a;
 	int	b;
@@ -52,7 +52,7 @@ void	ft_sort3(s_stack *stack_a)
 	}
 }
 
-void	ft_sort4(s_stack *stack_a, s_stack *stack_b)
+void	ft_sort4(t_stack *stack_a, t_stack *stack_b)
 {
 	ft_mintotop(stack_a);
 	ft_pb(stack_a, stack_b);
@@ -60,7 +60,7 @@ void	ft_sort4(s_stack *stack_a, s_stack *stack_b)
 	ft_pa(stack_a, stack_b);
 }
 
-void	ft_sort5(s_stack *stack_a, s_stack *stack_b)
+void	ft_sort5(t_stack *stack_a, t_stack *stack_b)
 {
 	ft_mintotop(stack_a);
 	ft_pb(stack_a, stack_b);
@@ -71,7 +71,7 @@ void	ft_sort5(s_stack *stack_a, s_stack *stack_b)
 	ft_pa(stack_a, stack_b);
 }
 
-void	ft_sort10(s_stack *stack_a, s_stack *stack_b)
+void	ft_sort10(t_stack *stack_a, t_stack *stack_b)
 {
 	int	i;
 	int	half;

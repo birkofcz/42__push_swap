@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:38:06 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/19 15:09:10 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/19 15:54:54 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 int	main(int argc, char *argv[])
 {
-	s_stack	stack_a;
-	s_stack	stack_b;
+	t_stack	stack_a;
+	t_stack	stack_b;
 
 	if (argc < 2)
 	{

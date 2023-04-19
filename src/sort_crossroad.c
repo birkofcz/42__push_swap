@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 15:49:58 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/19 14:46:26 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/19 15:55:02 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 #include "../include/push_swap.h"
 
-void	ft_sortstack(s_stack *stack_a, s_stack *stack_b)
+void	ft_sortstack(t_stack *stack_a, t_stack *stack_b)
 {
 	if (stack_a->top == 0)
 		return ;

@@ -6,13 +6,13 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:34:45 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/19 15:20:10 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/19 15:55:53 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	ft_findminindex(s_stack *stack_a)
+int	ft_findminindex(t_stack *stack_a)
 {
 	int	index;
 	int	i;
@@ -34,7 +34,7 @@ int	ft_findminindex(s_stack *stack_a)
 	return (index);
 }
 
-void	ft_mintotop(s_stack *stack_a)
+void	ft_mintotop(t_stack *stack_a)
 {
 	int	min_index;
 	int	half_stack;
@@ -50,7 +50,7 @@ void	ft_mintotop(s_stack *stack_a)
 	}
 }
 
-int	ft_findmaxindex(s_stack *stack_b)
+int	ft_findmaxindex(t_stack *stack_b)
 {
 	int	index;
 	int	i;
@@ -72,7 +72,7 @@ int	ft_findmaxindex(s_stack *stack_b)
 	return (index);
 }
 
-void	ft_maxtotop(s_stack *stack_b)
+void	ft_maxtotop(t_stack *stack_b)
 {
 	int	max_index;
 	int	half_stack;
