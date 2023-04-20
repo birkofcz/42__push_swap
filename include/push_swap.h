@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 12:20:40 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 11:12:44 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 12:38:21 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,6 +85,8 @@ void		ft_sort3(t_stack *stack_a);
 void		ft_sort4(t_stack *stack_a, t_stack *stack_b);
 void		ft_sort5(t_stack *stack_a, t_stack *stack_b);
 void		ft_sort10(t_stack *stack_a, t_stack *stack_b);
+void		ft_sort20(t_stack *stack_a, t_stack *stack_b);
+void		ft_sort50(t_stack *stack_a, t_stack *stack_b);
 void		ft_radix(t_stack *stack_a);
 void		ft_radix_sort(t_stack *indexes_a, t_stack *indexes_b);
 

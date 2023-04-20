@@ -6,47 +6,11 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 14:53:59 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 09:39:26 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 12:14:03 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
-
-/* int	*ft_create_indexes(t_stack *stack_a)
-{
-	int	*indexes;
-	int	*temp;
-	int	i;
-	int	j;
-
-	indexes = (int *)malloc(stack_a->size * sizeof(int));
-	temp = (int *)malloc(stack_a->size * sizeof(int));
-	i = 0;
-	j = 0;
-	while (i < stack_a->size)
-		temp[i++] = stack_a->data[j++];
-	ft_bubble_sort(temp, stack_a->size);
-	i = 0;
-	while (i < stack_a->size)
-	{
-		j = 0;
-		while (j < stack_a->size)
-		{
-			if (stack_a->data[i] == temp[j]) 
-			{
-				indexes[i] = j + 1;
-				break ;
-			}
-			j++;
-		}
-		i++;
-	}
-	free(temp);
-	print_indexes(indexes, stack_a->size);
-	return (indexes);
-} */
-
-/* Shorter version - NIRM friendly */
 
 int	*ft_create_indexes(t_stack *stack_a)
 {
