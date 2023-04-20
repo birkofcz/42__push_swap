@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:38:06 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 10:12:50 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 11:15:09 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,6 @@ int	main(int argc, char *argv[])
 	{
 		if ((ft_stackinit_numbers(&stack_a, &stack_b, argv, argc)) == 0)
 		{
-			ft_printstacks(&stack_a, &stack_b);
 			ft_sortstack(&stack_a, &stack_b);
 			ft_free_stacks(&stack_a, &stack_b);
 		}
