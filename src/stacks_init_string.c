@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:28:27 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 11:38:56 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 11:55:52 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,41 +15,7 @@
 /* STACK INITILIZATOR - initiates stack_a and stack_b with 
 parsed string */
 
-/* int ft_stackinit_string(t_stack *stack_a, t_stack *stack_b, char *argv)
-{
-	int		size;
-	char	**splitted;
-	int		*array = NULL;
-	int		pushed;
-
-	splitted = ft_split(argv, ' ');
-	if (ft_splitted_test(splitted) == 0)
-	{
-		size = ft_array_filler(&array, splitted);
-		ft_stacks(stack_a, stack_b, size);
-		pushed = size;
-		while (pushed > 0)
-		{
-			ft_push(stack_a, array[pushed - 1]);
-			pushed--;
-		}
-		ft_bubble_sort(array, size);
-		if ((ft_duplicate_limits_tester(array, size)) == 1)
-		{
-			ft_free_stacks(stack_a, stack_b);
-			return (1);
-		}
-		free(array);
-		free(splitted);
-		return (0);
-	}
-	else
-		return (1);
-} */
-
-/* Shorter version - NORM friendly */
-
-void ft_free_splitted(char *splitted[])
+void	ft_free_splitted(char *splitted[])
 {
 	int	i;
 
@@ -57,6 +23,18 @@ void ft_free_splitted(char *splitted[])
 	while (splitted[i] != NULL)
 		free(splitted[i++]);
 	free(splitted);
+}
+
+void	ft_free_all(char *splitted[], t_stack *s_a, t_stack *s_b, int *array)
+{
+	int	i;
+
+	i = 0;
+	while (splitted[i] != NULL)
+		free(splitted[i++]);
+	free(splitted);
+	free(array);
+	ft_free_stacks(s_a, s_b);
 }
 
 int	ft_stackinit_string(t_stack *stack_a, t_stack *stack_b, char *argv)
@@ -77,9 +55,7 @@ int	ft_stackinit_string(t_stack *stack_a, t_stack *stack_b, char *argv)
 		ft_bubble_sort(array, size);
 		if ((ft_duplicate_limits_tester(array, size)) == 1)
 		{
-			free(array);
-			ft_free_splitted(splitted);
-			ft_free_stacks(stack_a, stack_b);
+			ft_free_all(splitted, stack_a, stack_b, array);
 			return (1);
 		}
 		free(array);
@@ -88,5 +64,4 @@ int	ft_stackinit_string(t_stack *stack_a, t_stack *stack_b, char *argv)
 	}
 	ft_free_splitted(splitted);
 	return (1);
-
 }

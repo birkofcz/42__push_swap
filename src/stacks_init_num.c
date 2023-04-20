@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:28:27 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 11:05:42 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 11:52:46 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ with size = (argc - 1) (number of arguments, numbers) */
 
 long long	ft_atoi_sort(const char *str)
 {
-	int	sign;
+	int			sign;
 	long long	output;
 
 	sign = 1;
@@ -39,7 +39,7 @@ long long	ft_atoi_sort(const char *str)
 
 int	ft_limit_test(char *test)
 {
-	long long 	x;
+	long long	x;
 
 	x = ft_atoi_sort(test);
 	if (x < INT_MIN || x > INT_MAX)
@@ -52,8 +52,8 @@ int	ft_limit_test(char *test)
 
 int	*ft_array_from_num(int *array, char *argv[], int argc)
 {
-	int	i;
-	int	j;
+	int				i;
+	int				j;
 	long long int	x;
 
 	i = 1;
