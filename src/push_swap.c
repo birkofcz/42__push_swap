@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:38:06 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 11:15:09 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 12:47:55 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ int	main(int argc, char *argv[])
 	t_stack	stack_b;
 
 	if (argc < 2)
-	{
-		return (1);
-	}
+		return (0);
 	else if (argc == 2)
 	{
 		if ((ft_stackinit_string(&stack_a, &stack_b, argv[1])) == 0)
