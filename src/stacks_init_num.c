@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:28:27 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 09:43:47 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 11:05:42 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,19 +15,64 @@
 /* STACK INITILIZATOR (NUMBERS AS ARGUMENTS)- initiates stack_a and stack_b 
 with size = (argc - 1) (number of arguments, numbers) */
 
+long long	ft_atoi_sort(const char *str)
+{
+	int	sign;
+	long long	output;
+
+	sign = 1;
+	output = 0;
+	while (*str == '\f' || *str == '\n' || *str == '\r' || *str == '\t'
+		|| *str == '\v' || *str == ' ')
+		str++;
+	if (*str == '-')
+		sign *= -1;
+	if (*str == '+' || *str == '-')
+		str++;
+	while (*str >= '0' && *str <= '9')
+	{
+		output = output * 10 + (*str - '0');
+		str++;
+	}
+	return (output * sign);
+}
+
+int	ft_limit_test(char *test)
+{
+	long long 	x;
+
+	x = ft_atoi_sort(test);
+	if (x < INT_MIN || x > INT_MAX)
+	{
+		write(2, "Error\n", 6);
+		return (1);
+	}
+	return (0);
+}
+
 int	*ft_array_from_num(int *array, char *argv[], int argc)
 {
 	int	i;
 	int	j;
+	long long int	x;
 
 	i = 1;
 	j = 0;
 	array = (int *)malloc(argc * sizeof(int));
 	while (argv[i] != NULL)
 	{
-		array[j] = ft_atoi(argv[i]);
-		i++;
-		j++;
+		x = ft_atoi_sort(argv[i]);
+		if (x < INT_MIN || x > INT_MAX)
+		{
+			write(2, "Error", 6);
+			return (NULL);
+		}
+		else
+		{
+			array[j] = ft_atoi(argv[i]);
+			i++;
+			j++;
+		}
 	}
 	return (array);
 }

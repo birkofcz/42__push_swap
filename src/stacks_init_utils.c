@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 11:22:05 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 09:36:20 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 11:06:05 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int	ft_splitted_test(char *splitted[])
 	int	j;
 
 	i = 0;
-	while (splitted [i] != NULL)
+	while (splitted[i] != NULL)
 	{
 		j = 0;
 		if (splitted[i][j] == '-')
@@ -40,6 +40,10 @@ int	ft_splitted_test(char *splitted[])
 		}	
 		i++;
 	}
+	i = 0;
+	while (splitted[i] != NULL)
+		if (ft_limit_test(splitted[i++]) == 1)
+			return (1);
 	return (0);
 }
 
@@ -90,11 +94,6 @@ int	ft_duplicate_limits_tester(int array[], int size)
 	while (i < size)
 	{
 		if (array[i] == array[i + 1])
-		{
-			write(2, "Error\n", 6);
-			return (1);
-		}
-		else if (array[i] < INT_MIN || array[i] > INT_MAX)
 		{
 			write(2, "Error\n", 6);
 			return (1);

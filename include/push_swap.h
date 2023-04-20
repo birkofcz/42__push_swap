@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 12:20:40 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 09:43:05 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 11:08:08 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,6 +74,9 @@ void	ft_stacks(t_stack *stack_a, t_stack *stack_b, int size);
 int		ft_duplicate_limits_tester(int array[], int size);
 void	ft_free_stacks(t_stack *stack_a, t_stack *stack_b);
 int		ft_get_size(char *splitted[]);
+long long	ft_atoi_sort(const char *str);
+int		ft_limit_test(char *test);
+
 
 /* Sorting crossroad */
 void	ft_sortstack(t_stack *stack_a, t_stack *stack_b);
