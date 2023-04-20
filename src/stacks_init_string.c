@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:28:27 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 10:24:26 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 11:38:56 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,17 @@ parsed string */
 } */
 
 /* Shorter version - NORM friendly */
+
+void ft_free_splitted(char *splitted[])
+{
+	int	i;
+
+	i = 0;
+	while (splitted[i] != NULL)
+		free(splitted[i++]);
+	free(splitted);
+}
+
 int	ft_stackinit_string(t_stack *stack_a, t_stack *stack_b, char *argv)
 {
 	int		size;
@@ -66,13 +77,16 @@ int	ft_stackinit_string(t_stack *stack_a, t_stack *stack_b, char *argv)
 		ft_bubble_sort(array, size);
 		if ((ft_duplicate_limits_tester(array, size)) == 1)
 		{
+			free(array);
+			ft_free_splitted(splitted);
 			ft_free_stacks(stack_a, stack_b);
 			return (1);
 		}
 		free(array);
-		free(splitted);
+		ft_free_splitted(splitted);
 		return (0);
 	}
-	else
-		return (1);
+	ft_free_splitted(splitted);
+	return (1);
+
 }
