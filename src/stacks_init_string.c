@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:28:27 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/19 17:04:57 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 09:37:55 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,11 @@ parsed string */
 } */
 
 /* Shorter version - NORM friendly */
-int ft_stackinit_string(t_stack *stack_a, t_stack *stack_b, char *argv)
+int	ft_stackinit_string(t_stack *stack_a, t_stack *stack_b, char *argv)
 {
 	int		size;
 	char	**splitted;
-	int		*array = NULL;
+	int		*array;
 	int		pushed;
 
 	splitted = ft_split(argv, ' ');

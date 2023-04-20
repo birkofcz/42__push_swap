@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 14:53:59 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 09:17:49 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 09:39:26 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,12 +67,12 @@ int	*ft_create_indexes(t_stack *stack_a)
 	{
 		j = -1;
 		while (++j < stack_a->size)
-			if (stack_a->data[i] == temp[j]) 
+			if (stack_a->data[i] == temp[j])
 				indexes[i] = j + 1;
 	}
 	free(temp);
 	return (indexes);
-} 
+}
 
 void	ft_sort_radix(t_stack *indexes_a, t_stack *indexes_b)
 {

@@ -6,17 +6,17 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 07:59:56 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 09:18:40 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 09:38:12 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-void	ft_radix_data_init(t_radix_data *data, t_stack *indexes_a, t_stack *indexes_b)
+void	ft_radix_data_init(t_radix_data *data, t_stack *ind_a, t_stack *ind_b)
 {
-	data->size_original = indexes_a->size;
-	data->size_a = indexes_a->size;
-	data->size_b = indexes_b->size;
+	data->size_original = ind_a->size;
+	data->size_a = ind_a->size;
+	data->size_b = ind_b->size;
 	data->max_bits = 0;
 }
 
@@ -26,8 +26,8 @@ void	ft_count_bits(t_radix_data *data, t_stack *indexes_a)
 		data->max_bits++;
 }
 
-void	ft_radix_pushback(t_radix_data *data, t_stack *indexes_a, t_stack *indexes_b)
+void	ft_radix_pushback(t_radix_data *data, t_stack *ind_a, t_stack *ind_b)
 {
-			ft_pa(indexes_a, indexes_b);
-			data->size_b--;
+	ft_pa(ind_a, ind_b);
+	data->size_b--;
 }

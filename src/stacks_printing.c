@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:31:23 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/19 15:56:39 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 09:40:34 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,4 +36,3 @@ void	ft_printstacks(t_stack *stack_a, t_stack *stack_b)
 	ft_printf(" stack_a\tstack_b\n");
 	ft_printf("\n");
 }
-
