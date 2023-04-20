@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 12:20:40 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/19 15:53:48 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 09:19:04 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,17 @@ typedef struct s_stack{
 	int		top;
 	int		size;
 }	t_stack;
+
+/* t_radix_data struct typedef */
+typedef struct s_radix_data{
+	int	i;
+	int	j;
+	int	max_bits;
+	int	top_number;
+	int	size_a;
+	int	size_b;
+	int size_original;
+}	t_radix_data;
 
 /* Stack initialization */
 void	ft_stacks(t_stack *stack_a, t_stack *stack_b, int size);
@@ -75,6 +86,7 @@ void	ft_sort3(t_stack *stack_a);
 void	ft_sort4(t_stack *stack_a, t_stack *stack_b);
 void	ft_sort5(t_stack *stack_a, t_stack *stack_b);
 void	ft_sort10(t_stack *stack_a, t_stack *stack_b);
+void	ft_radix(t_stack *stack_a);
 void	ft_radix_sort(t_stack *indexes_a, t_stack *indexes_b);
 
 /* Sorting utilities */
@@ -83,15 +95,15 @@ void	ft_mintotop(t_stack *stack_a);
 int		ft_findmaxindex(t_stack *stack_b);
 void	ft_maxtotop(t_stack *stack_b);
 void	ft_sort_descending(t_stack *stack_a, t_stack *stack_b);
+void	ft_radix_data_init(t_radix_data *data, t_stack *indexes_a, t_stack *indexes_b);
+void	ft_count_bits(t_radix_data *data, t_stack *indexes_a);
+void	ft_radix_pushback(t_radix_data *data, t_stack *indexes_a, t_stack *indexes_b);
 
 
 /* Utility functions */
 int		*ft_bubble_sort(int array[], int size);
 void	ft_printstacks(t_stack *stack_a, t_stack *stack_b);
 
-/* Sort big experiments */
-//void ft_doctor_strange(t_stack *stack_a, t_stack *stack_b);
-void	ft_radix(t_stack *stack_a);
 
 
 

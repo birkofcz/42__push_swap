@@ -6,7 +6,7 @@
 #    By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/27 13:45:17 by sbenes            #+#    #+#              #
-#    Updated: 2023/04/19 14:54:00 by sbenes           ###   ########.fr        #
+#    Updated: 2023/04/20 08:14:57 by sbenes           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@
 SRC_DIR = src/
 SRC = $(addprefix $(SRC_DIR), operations_push.c operations_rev_rotate.c operations_rotate.c operations_swap.c\
 		sort_to10.c sort_crossroad.c sort_utils.c sort_utils2.c stacks_free.c stacks_init_num.c stacks_init_string.c\
-		stacks_init_utils.c stacks_printing.c sort_radix.c push_swap.c)
+		stacks_init_utils.c stacks_printing.c sort_radix_utils.c sort_radix.c push_swap.c)
 OBJ = $(SRC:.c=.o)
 CC = cc
 CFLAGS = -Wall -Wextra -Werror

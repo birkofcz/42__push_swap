@@ -6,13 +6,13 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 14:53:59 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/19 15:55:13 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/20 09:17:49 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
 
-int	*ft_create_indexes(t_stack *stack_a)
+/* int	*ft_create_indexes(t_stack *stack_a)
 {
 	int	*indexes;
 	int	*temp;
@@ -42,54 +42,68 @@ int	*ft_create_indexes(t_stack *stack_a)
 		i++;
 	}
 	free(temp);
+	print_indexes(indexes, stack_a->size);
 	return (indexes);
-}
+} */
 
-void	ft_sort_radix(/* t_stack *stack_a, t_stack *stack_b, */ t_stack *indexes_a, t_stack *indexes_b)
+/* Shorter version - NIRM friendly */
+
+int	*ft_create_indexes(t_stack *stack_a)
 {
+	int	*indexes;
+	int	*temp;
 	int	i;
 	int	j;
-	int	max_bits;
-	int	top_number;
-	int	size_a;
-	int	size_b;
-	int	size_original;
 
-	size_original = indexes_a->size;
-	size_a = indexes_a->size;
-	size_b = indexes_b->size;
-	max_bits = 0;
-	while ((indexes_a->size >> max_bits) != 0)
-		max_bits++;
+	indexes = (int *)malloc(stack_a->size * sizeof(int));
+	temp = (int *)malloc(stack_a->size * sizeof(int));
 	i = 0;
-	while (i < max_bits)
+	j = 0;
+	while (i < stack_a->size)
+		temp[i++] = stack_a->data[j++];
+	ft_bubble_sort(temp, stack_a->size);
+	i = -1;
+	while (++i < stack_a->size)
 	{
-		j = 0;
-		while (j < size_original)
+		j = -1;
+		while (++j < stack_a->size)
+			if (stack_a->data[i] == temp[j]) 
+				indexes[i] = j + 1;
+	}
+	free(temp);
+	return (indexes);
+} 
+
+void	ft_sort_radix(t_stack *indexes_a, t_stack *indexes_b)
+{
+	t_radix_data	data;
+
+	ft_radix_data_init(&data, indexes_a, indexes_b);
+	ft_count_bits(&data, indexes_a);
+	data.i = 0;
+	while (data.i < data.max_bits)
+	{
+		data.j = 0;
+		while (data.j < data.size_original)
 		{
-			top_number = indexes_a->data[indexes_a->top];
-			if (((top_number >> i) & 1) == 1)
-			{
+			data.top_number = indexes_a->data[indexes_a->top];
+			if (((data.top_number >> data.i) & 1) == 1)
 				ft_ra(indexes_a);
-			}
 			else
 			{
 				ft_pb(indexes_a, indexes_b);
-				size_a--;
-				size_b++;
+				data.size_a--;
+				data.size_b++;
 			}
-			j++;
+			data.j++;
 		}
-		while (size_b != 0)
-		{
-			ft_pa(indexes_a, indexes_b);
-			size_b--;
-		}
-		i++;
+		while (data.size_b != 0)
+			ft_radix_pushback(&data, indexes_a, indexes_b);
+		data.i++;
 	}
 }
 
-void	ft_radix(t_stack *stack_a /* t_stack *stack_b */)
+void	ft_radix(t_stack *stack_a)
 {
 	int		*indexes;
 	t_stack	indexes_a;
