@@ -23,7 +23,7 @@ In the implementation, the original stack of integers (stack_a) is first convert
 
 The Radix sort implementation in this project consists of the following key steps:
 
-- Initialization: The shadow stacks (indexes_a and indexes_b) are created and initialized with the indexes of the integers in their sorted order.
+- Initialization: The shadow stacks (indexes_a and indexes_b) are created and initialized with the indexes 0 to N (to not deal with negative numbers with Radix) of the integers in their unsorted order.
 
 - Bit counting: The maximum number of bits required to represent the integers in binary form is calculated. This determines the number of iterations required for the Radix sort algorithm.
 
