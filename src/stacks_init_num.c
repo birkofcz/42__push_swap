@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:28:27 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 11:52:46 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/21 14:30:30 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ long long	ft_atoi_sort(const char *str)
 	return (output * sign);
 }
 
+/* Testing for max and min int limits - using long long atoi function */
+
 int	ft_limit_test(char *test)
 {
 	long long	x;
@@ -49,6 +51,8 @@ int	ft_limit_test(char *test)
 	}
 	return (0);
 }
+
+/* Creates array from numbers */
 
 int	*ft_array_from_num(int *array, char *argv[], int argc)
 {

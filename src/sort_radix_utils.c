@@ -6,11 +6,14 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/20 07:59:56 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 11:13:31 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/21 14:21:04 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+/* Utilities for RADIX SORT	- initialising data to struct, counting
+bits and pushing the numbers back from stack_b to stack_a */
 
 void	ft_radix_data_init(t_radix_data *d, t_stack *ind_a, t_stack *ind_b)
 {

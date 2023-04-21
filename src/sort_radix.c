@@ -6,11 +6,14 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/16 14:53:59 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 12:14:03 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/21 14:26:52 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+/* This function will create index stack - assign indexes from 0 to N
+to the numbers in stack_a - in unsiorted order as in stack_a. */
 
 int	*ft_create_indexes(t_stack *stack_a)
 {
@@ -37,6 +40,11 @@ int	*ft_create_indexes(t_stack *stack_a)
 	free(temp);
 	return (indexes);
 }
+
+/* Actual sorting function. Working with extra struct to store 
+all the variables, initialising, counting bits (all utility functions)
+the running the loops through the stack, shifting on bits from 
+LSB to MSB. Bla, bla, magic happens and voila! - is sorted */
 
 void	ft_sort_radix(t_stack *indexes_a, t_stack *indexes_b)
 {
@@ -66,6 +74,10 @@ void	ft_sort_radix(t_stack *indexes_a, t_stack *indexes_b)
 		data.i++;
 	}
 }
+
+/* Everything starts here. Creates the shadow stacks for indexes
+filling with data, then calling the sorting function and finally
+frees the stacks */
 
 void	ft_radix(t_stack *stack_a)
 {

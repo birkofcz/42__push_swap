@@ -6,11 +6,14 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/19 14:48:31 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 13:23:24 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/21 14:29:06 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+/* Utilities 2 - just my own bubble sort function, takes and array of 
+integers and returns them sorted */
 
 int	*ft_bubble_sort(int array[], int size)
 {

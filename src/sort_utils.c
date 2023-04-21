@@ -6,11 +6,13 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/29 14:34:45 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 09:40:22 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/21 14:27:59 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+/* Sorting utilities - finding and manipulating numbers */
 
 int	ft_findminindex(t_stack *stack_a)
 {

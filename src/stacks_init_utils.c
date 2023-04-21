@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/09 11:22:05 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 11:06:05 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/21 14:32:20 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,8 @@ int	ft_array_filler(int **array, char *splitted[])
 	return (size);
 }
 
+/* Creating the actual stack_a and stack_b */
+
 void	ft_stacks(t_stack *stack_a, t_stack *stack_b, int size)
 {
 	stack_a->data = (int *)malloc(size * sizeof(int));
@@ -86,6 +88,8 @@ void	ft_stacks(t_stack *stack_a, t_stack *stack_b, int size)
 	stack_b->size = size;
 }
 
+/* Testing for duplicate numbers */
+
 int	ft_duplicate_limits_tester(int array[], int size)
 {
 	int	i;
@@ -102,6 +106,8 @@ int	ft_duplicate_limits_tester(int array[], int size)
 	}
 	return (0);
 }
+
+/* Measuring the size of *splitted[] */
 
 int	ft_get_size(char *splitted[])
 {

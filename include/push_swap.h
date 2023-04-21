@@ -6,7 +6,7 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/12 12:20:40 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 12:38:21 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/21 14:34:06 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,6 @@
 # include "../libft/ft_printf.h"
 # include <unistd.h>
 # include <limits.h>
-# include <math.h>
 
 /* t_stack struct typedef */
 typedef struct s_stack{
@@ -69,7 +68,6 @@ int			ft_stackinit_string(t_stack *stack_a, t_stack *stack_b, char *argv);
 int			ft_stackinit_numbers(t_stack *s_a, t_stack *s_b, char *v[], int c);
 int			ft_splitted_test(char *splitted[]);
 int			ft_array_filler(int **array, char *splitted[]);
-void		ft_stacks(t_stack *stack_a, t_stack *stack_b, int size);
 int			ft_duplicate_limits_tester(int array[], int size);
 void		ft_free_stacks(t_stack *stack_a, t_stack *stack_b);
 int			ft_get_size(char *splitted[]);
@@ -99,6 +97,10 @@ void		ft_sort_descending(t_stack *stack_a, t_stack *stack_b);
 void		ft_radix_data_init(t_radix_data *d, t_stack *ind_a, t_stack *ind_b);
 void		ft_count_bits(t_radix_data *data, t_stack *indexes_a);
 void		ft_radix_pushback(t_radix_data *d, t_stack *ind_a, t_stack *ind_b);
+
+/* Maiin utilities */
+int			ft_is_sorted(t_stack *stack_a);
+void		ft_run_process(t_stack *stack_a, t_stack *stack_b);
 
 /* Utility functions */
 int			*ft_bubble_sort(int array[], int size);

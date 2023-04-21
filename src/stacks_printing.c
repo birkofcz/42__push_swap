@@ -6,11 +6,13 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/27 13:31:23 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 09:40:34 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/21 14:32:45 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/push_swap.h"
+
+/* Just a helper function to print the stacks */
 
 void	ft_printstacks(t_stack *stack_a, t_stack *stack_b)
 {

@@ -6,11 +6,12 @@
 /*   By: sbenes <sbenes@student.42prague.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/05 15:49:58 by sbenes            #+#    #+#             */
-/*   Updated: 2023/04/20 12:43:45 by sbenes           ###   ########.fr       */
+/*   Updated: 2023/04/21 14:28:02 by sbenes           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/* Just a crossroads to various sorting functions depending on input*/
+/* Just a crossroads to various sorting functions depending 
+on input size*/
 
 #include "../include/push_swap.h"
 
