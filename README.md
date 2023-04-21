@@ -4,7 +4,7 @@ My score:  **84/125** (using a Radix sort implementation which is not - in this 
 
 Push_swap is a program that sorts a stack of integers using a limited set of operations. The primary goal is to sort the stack with the least number of operations possible, also only use the limited set of operations. The program takes a list of integers as input and outputs the sequence of operations required to sort the stack.
 
-Contrary to usual solutions involving linked list to simulate stack behaviour, my approach is using a typedef struct holding and integer array, size and top index of the stack.
+Contrary to usual solutions involving linked list to simulate stack behaviour, my approach is using a typedef struct holding an integer array, size and top index of the stack.
 
 The program first checks if the stack is already sorted. If it is, no sorting is performed, and memory is freed. Otherwise, the sorting process begins. The program initializes two stacks, stack_a (the main stack) and stack_b (the auxiliary stack), and performs error management (input of non-number, limits of integers and duplicates) before starting the sorting process.
 
