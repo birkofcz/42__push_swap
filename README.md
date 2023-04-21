@@ -19,7 +19,7 @@ For more than 10 integers, it employs the radix sort algorithm, which is based o
 
 The Radix sort used in the Push_swap project is customized to work with stacks instead of the traditional arrays or lists. The main purpose of the project is to sort a stack of integers using the smallest possible number of operations. Radix sort is an excellent choice for this task due to its linear time complexity.
 
-In the implementation, the original stack of integers (stack_a) is first converted into a "shadow stack" containing the indexes of the integers in their sorted order. The shadow stack (indexes_a) is then sorted using Radix sort, and the operations performed during the sorting process are mirrored onto the original stack (stack_a). This approach ensures that the original stack is sorted using the same sequence of operations as the shadow stack.
+In the implementation, the original stack of integers (stack_a) is first converted into a "shadow stack" containing the indexes of the integers in their unsorted order. The shadow stack (indexes_a) is then sorted using Radix sort, and the operations performed are written to the screen. This approach ensures that the original stack can be sorted using the same sequence of operations as the shadow stack.
 
 The Radix sort implementation in this project consists of the following key steps:
 
