@@ -1,6 +1,6 @@
 # 42 project: push_swap
 
-My score:  **PASS with 84/100** (using a Radix sort implementation which is not - in this particular case - the most efficient algorithm. On the other hand, it is clear and easily managable, predicatable).
+My score:  **PASS with 84/100** (using a Radix sort implementation which is not - in this particular case - the most efficient algorithm. On the other hand, it is clear and easily managable).
 
 Push_swap is a program that sorts a stack of integers using a limited set of operations. The primary goal is to sort the stack with the least number of operations possible, also only use the limited set of operations. The program takes a list of integers as input and outputs the sequence of operations required to sort the stack.
 
